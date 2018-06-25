@@ -5,6 +5,12 @@
       FilApp
     </ion-title>
 
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+
   </ion-navbar>
 </ion-header>
 
@@ -16,11 +22,13 @@
 
       <ion-item>
 
-        <ion-avatar item-left>
+        <ion-thumbnail item-left>
           <img [src]="listaTurnos.Imagen">
-        </ion-avatar>
+        </ion-thumbnail>
 
         <h2>{{ listaTurnos.Empresa }}</h2>
+        <p>Turno: {{ listaTurnos.Turno }}</p>
+        <p>Asesor: {{ listaTurnos.Asesor }}</p>
 
       </ion-item>
 
