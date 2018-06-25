@@ -1,14 +1,31 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
+
     <ion-title>
-      Ionic Blank
+      FilApp
     </ion-title>
+
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+
+  <ion-list>
+
+    <ion-item-sliding *ngFor="let listaTurnos of listaTurnos">
+
+      <ion-item>
+
+        <ion-avatar item-left>
+          <img [src]="listaTurnos.Imagen">
+        </ion-avatar>
+
+        <h2>{{ listaTurnos.Empresa }}</h2>
+
+      </ion-item>
+
+    </ion-item-sliding>
+
+  </ion-list>
+
 </ion-content>

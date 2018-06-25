@@ -1,6 +1,6 @@
 {
   "name": "MockUpFilApp",
-  "app_id": "",
+  "app_id": "65991ed4",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
