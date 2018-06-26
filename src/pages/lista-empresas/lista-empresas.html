@@ -2,10 +2,6 @@
 
   <ion-navbar color="primary">
 
-    <button ion-button icon-only menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-
     <ion-title>
       Selecciona la Empresa
     </ion-title>
@@ -19,9 +15,9 @@
 
   <ion-list>
 
-    <ion-item *ngFor="let empresas of listEmpresas" (click)="verSedes()">
+    <ion-item *ngFor="let empresas of listEmpresas" (click)="verSedes(nombreEmpresa)">
 
-      <ion-thumbnail item-left>
+      <ion-thumbnail item-start>
         <img [src]="empresas.Imagen">
       </ion-thumbnail>
 

@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the ListaSedesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { ListaSedes } from "../../data/data.ListaSedes";
+import { ListaSedesInterface } from "../../interfaces/listaSedes.interface";
+
+import { ListaServiciosPage } from "../lista-servicios/lista-servicios";
 
 @IonicPage()
 @Component({
@@ -15,11 +13,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ListaSedesPage {
 
+  listSedes:ListaSedesInterface[]=[];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.listSedes = this.navParams.get("nombreEmpresa");
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ListaSedesPage');
+  verServicios(){
+    this.navCtrl.push("ListaServiciosPage");
   }
 
 }

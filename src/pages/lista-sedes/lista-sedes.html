@@ -1,12 +1,26 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>Selecciona la Sede</ion-title>
+
+    <ion-title>
+      Selecciona la Sede: {{ listSedes.NombreEmpresa }}
+    </ion-title>
+
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
+
+  <ion-list>
+
+    <ion-item (click)="verServicios()">
+
+      <h2>{{ listSedes.Nombre }}</h2>
+
+    </ion-item>
+
+  </ion-list>
 
 </ion-content>
