@@ -1,13 +1,17 @@
 <ion-header>
   <ion-navbar color="primary">
 
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
     <ion-title>
       Turnos Activos
     </ion-title>
 
     <ion-buttons end>
       <button ion-button item-end icon-end (click)="showAlert()">
-          Nuevo Turno
+        Nuevo Turno
         <ion-icon name="add"></ion-icon>
       </button>
     </ion-buttons>
@@ -29,14 +33,15 @@
 
       <ion-grid>
         <ion-row>
-          
+
           <ion-col>
             <h2>
               <b>Turno: </b>{{ listaTurnos.Turno }}</h2>
           </ion-col>
 
           <ion-col>
-            <h2><b>Asesor: </b>{{ listaTurnos.Asesor }}</h2>
+            <h2>
+              <b>Asesor: </b>{{ listaTurnos.Asesor }}</h2>
           </ion-col>
 
         </ion-row>
