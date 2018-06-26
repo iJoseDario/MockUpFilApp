@@ -6,7 +6,8 @@
     </ion-title>
 
     <ion-buttons end>
-      <button ion-button icon-only>
+      <button ion-button item-end icon-end (click)="showAlert()">
+          Nuevo Turno
         <ion-icon name="add"></ion-icon>
       </button>
     </ion-buttons>
@@ -14,27 +15,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-
-  <!-- <ion-list>
-
-    <ion-item-sliding *ngFor="let listaTurnos of listaTurnos">
-
-      <ion-item>
-
-        <ion-thumbnail item-left>
-          <img [src]="listaTurnos.Imagen">
-        </ion-thumbnail>
-
-        <h2>{{ listaTurnos.Empresa }}</h2>
-        <p>Turno: {{ listaTurnos.Turno }}</p>
-        <p>Asesor: {{ listaTurnos.Asesor }}</p>
-
-      </ion-item>
-
-    </ion-item-sliding>
-
-  </ion-list> -->
+<ion-content center text-center>
 
   <ion-card *ngFor="let listaTurnos of listaTurnos">
 
@@ -43,18 +24,19 @@
     </ion-card-header>
 
     <img [src]="listaTurnos.Imagen">
-    
+
     <ion-card-content>
 
       <ion-grid>
         <ion-row>
-
-          <ion-col col-6>
-            <h2>Turno: {{ listaTurnos.Turno }}</h2>
+          
+          <ion-col>
+            <h2>
+              <b>Turno: </b>{{ listaTurnos.Turno }}</h2>
           </ion-col>
 
-          <ion-col col-6>
-            <h2>Asesor: {{ listaTurnos.Asesor }}</h2>
+          <ion-col>
+            <h2><b>Asesor: </b>{{ listaTurnos.Asesor }}</h2>
           </ion-col>
 
         </ion-row>
