@@ -24,7 +24,7 @@ export class ListaEmpresasPage {
     this.listSedes = ListaSedes.slice(0);
   }
 
-  verSedes(nombreEmpresa:string = "BBVA"){
+  verSedes(nombreEmpresa:ListaSedesInterface){
     console.log("El nombre de la empresa es: " + nombreEmpresa);
     this.navCtrl.push(ListaSedesPage, {'NombreEmpresa': nombreEmpresa} );
   }
