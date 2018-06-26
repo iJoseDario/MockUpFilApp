@@ -10,7 +10,7 @@
     </ion-title>
 
     <ion-buttons end>
-      <button ion-button item-end icon-end (click)="showAlert()">
+      <button ion-button item-end icon-end (click)="verEmpresas()">
         Nuevo Turno
         <ion-icon name="add"></ion-icon>
       </button>
@@ -21,7 +21,7 @@
 
 <ion-content>
 
-  <ion-card *ngFor="let listaTurnos of listaTurnos" (click)="navegarDetallesTurno(Empresa)">
+  <ion-card *ngFor="let listaTurnos of listaTurnos">
 
     <ion-card-header>
       <h1>{{ listaTurnos.Empresa }}</h1>

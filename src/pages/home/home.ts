@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController, MenuController } from 'ionic-angular';
+import { NavController, NavParams, MenuController, AlertController } from 'ionic-angular';
+
 import { ListaTurnos } from "../../data/data.ListaTurnos";
 import { ListaTurnosInterface } from "../../interfaces/listaTurnos.interface";
-import { DetallesTurnoPage } from "../detalles-turno/detalles-turno";
+
+import { ListaEmpresasPage } from "../lista-empresas/lista-empresas";
 
 @Component({
   selector: 'page-home',
@@ -11,9 +13,13 @@ import { DetallesTurnoPage } from "../detalles-turno/detalles-turno";
 
 export class HomePage {
 
-  listaTurnos: ListaTurnosInterface[] = [];
+  listaTurnos:ListaTurnosInterface[] = [];
   
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public menuCtrl: MenuController) {
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    public alertCtrl: AlertController,
+    public menuCtrl: MenuController) {
+      
     this.listaTurnos = ListaTurnos.slice(0);
   }
 
@@ -26,8 +32,8 @@ export class HomePage {
     alert.present();
   }
 
-  navegarDetallesTurno(Empresa: any) {
-    this.navCtrl.push(DetallesTurnoPage, { 'listaTurnos': Empresa });
+  verEmpresas(){
+    this.navCtrl.push("ListaEmpresasPage");
   }
 
 }
