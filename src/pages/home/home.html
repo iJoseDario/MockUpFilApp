@@ -19,9 +19,9 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content center text-center>
+<ion-content>
 
-  <ion-card *ngFor="let listaTurnos of listaTurnos">
+  <ion-card *ngFor="let listaTurnos of listaTurnos" (click)="navegarDetallesTurno(Empresa)">
 
     <ion-card-header>
       <h1>{{ listaTurnos.Empresa }}</h1>
@@ -29,7 +29,7 @@
 
     <img [src]="listaTurnos.Imagen">
 
-    <ion-card-content>
+    <ion-card-content center text-center>
 
       <ion-grid>
         <ion-row>
